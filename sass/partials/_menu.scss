@@ -1,0 +1,44 @@
+.header-menu {
+  @include font($fw: 400, $fs: 20px, $lh: 24px, $ls: 0.03em);
+  &__list {
+    display: flex;
+  }
+  &__link {
+    font-family: getFont("mont");
+    color: $primary;
+  }
+
+  @include phone {
+    &__list {
+      display: none;
+    }
+    &__btn {
+      border: none;
+      background-color: #0000;
+    }
+  }
+
+  @include tablet {
+    &__btn {
+      display: none;
+    }
+    &__list {
+      // justify-content: center;
+      // align-items: center;
+      // gap: 24px;
+
+      display: none;
+    }
+  }
+
+  @include desktop {
+    &__btn {
+      display: none;
+    }
+    &__list {
+      // justify-content: center;
+      // gap: 24px;
+      display: none;
+    }
+  }
+}

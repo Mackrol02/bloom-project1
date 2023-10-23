@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloom Store</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper for blog -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <style>
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        content: "";
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
+    <include src="./bloom-project/partials/header.html"></include>
+    <include src="./bloom-project/partials/main.html"></include>
+    <include src="./bloom-project/partials/about.html"></include>
+    <include src="./bloom-project/partials/store.html"></include>
+    <include src="./bloom-project/partials/delivery.html"></include>
+    <include src="./bloom-project/partials/blog.html"></include>
+    <include src="./bloom-project/partials/footer.html"></include>
+    <include src="./bloom-project/partials/modal.html"></include>
+
+    <!-- Skrypt jest na samym dole kodu. On juz ma w sobie podłączony SAAS plik. -->
+
+    <script src="./bloom-project/js/index.js" type="module"></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="./bloom-project/js/mobile-menu.js"></script>
+    <script src="./bloom-project/js/modal.js"></script>
+    <script src="./bloom-project/js/label.js"></script>
+
+    <!-- AOS -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Swiper for blog-->
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        // Overflow effect
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 30,
+          slideShadows: false,
+        },
+
+        // Navigation arrows
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
